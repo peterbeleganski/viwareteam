@@ -1,0 +1,100 @@
+.header_course{
+    text-align: center;
+}
+
+.video_main{
+margin-left: 200px;
+
+}
+
+.video_course{
+    width: 800px;
+    height: 500px;
+}
+
+.comments{
+    margin-left: 200px;
+    margin-top: 50px;
+    border: 1px solid rgba(104, 104, 104, 0.85);
+}
+
+#email_name{
+    font-size: 20px;
+    width: 500px;
+    margin-left: 81px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#comment{
+    margin-left: 80px;
+    width: 500px;
+    height: 130px;
+    font-size:20px;
+}
+
+#label_email{
+    font-size: 25px;
+    font-family: cursive;
+
+}
+
+#send_comment{
+    font-size: 22px;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-left: 76px;
+    margin-top: 10px;
+    background-color: rgba(33, 158, 255, 0.85);
+    color: white;
+}
+
+.comt{
+    margin-top: 30px;
+    padding: 10px;
+    text-align: center;
+    font-size: 30px;
+    color: rgba(39, 33, 255, 0.85);
+}
+
+.comt:hover{
+    text-decoration: underline;
+    
+}
+
+#comment_form{
+    display: none;
+}
+
+.comment_posts{
+    margin:0 auto;
+}
+
+#table_comt{
+    margin: 0 auto;
+    display:none;
+    padding:20px;
+}
+
+#table_comt tr{
+    margin-top:20px;
+}
+
+#table_comt tr td h2{
+    text-align:left;
+}
+
+.text_comt{
+    border:3px solid aqua;
+    padding:10px;
+    margin-top:10px;
+}
+
+.content_comt{
+    font-family:cursive;
+}
+
+
+
+
