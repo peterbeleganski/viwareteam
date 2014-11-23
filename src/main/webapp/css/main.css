@@ -1,0 +1,513 @@
+@CHARSET "ISO-8859-1";
+body {
+  font-family: 'Nunito', sans-serif;
+  color: #384047;
+  background-color: #e4e4e4;
+  margin-top:0px;
+
+}
+
+
+
+
+
+h1{
+	font-size:32px;
+}
+h2{
+	font-size:28px;
+}
+
+#nov{
+	color:red;
+	text-decoration:underline;
+}
+
+#forum{
+	text-align:center;
+}
+
+#text_news{
+	margin:0 auto;
+	margin-top:30px;
+	padding:10px;
+	width:360px;
+	height:100%;
+	font-size:20px;
+	font-family:cursive;
+}
+
+#posts{
+	margin-left:500px;
+	
+}
+
+#form{
+	float:left;
+}
+
+#treiner {
+	width:360px;
+	height:300px;
+	font-size:20px;
+	font-family:cursive;
+	margin-top:-180px;
+	
+	
+}
+
+span{
+	color:red;
+	
+}
+
+#desc_js{
+	
+}
+
+#slides_js{
+	float:right;
+}
+
+#slides_jsp{
+	float:right;
+}
+
+#slides{
+	float:right;
+}
+
+#error_mes{
+color:red;
+font-size:25px;	
+}
+
+nav ul {
+  list-style: none;
+  background-color:#0C48E1;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 15px;
+  font-size:25px;
+  color:white;
+}
+
+#sign_up{
+  margin-left: 500px;
+}
+
+table tr td  {
+	background-color:#E7F691;
+}
+
+
+#start {
+	color:#0C48E1;
+	text-align:center;
+	font-size:30px;
+	
+}
+
+#start:hover{
+	font-size: 30px;
+	text-decoration:underline;
+}
+
+#java_video_text{
+	
+	float:left;
+}
+
+iframe {
+	float:left;
+}
+
+#java_pic{
+	float:right;
+}
+
+#wrapper-settings{
+float:right;	
+}
+#wrapper-settings ul {
+	color:black;	
+  background-color:#0C48E1;
+}
+
+#wrapper-settings ul li a {
+	
+	  margin-right:10px;
+  margin-left: 10px;
+  text-decoration: none;
+  color:white;
+  font-size:20px;
+  font-family: Arial white bold;
+  font-style:bold;
+}
+#wrapper-settings ul li a:hover{
+	font-size: 20px;
+  border-radius:5px;
+  background-color:#0ABBDA;
+  padding:1px;
+  text-decoration:underline;
+  font-family: Arial white bold;	
+}
+
+#wrapper-settings ul li {
+
+  padding: 5px;
+  font-size:25px;
+  color:white;
+}
+
+nav ul li a {
+  margin-right:10px;
+  margin-left: 10px;
+  text-decoration: none;
+  color:white;
+  font-size:25px;
+  font-family: Arial white bold;
+  font-style:bold;
+}
+
+
+nav a, nav a:visited {
+  color:white;
+  text-decoration:underline;
+}
+
+/* selected nav link */
+nav a.selected, nav a:hover {
+  color:white;
+  font-size: 25px;
+  border-radius:5px;
+  background-color:#0ABBDA;
+  padding:1px;
+  font-family: Arial white bold;
+  text-decoration:underline;
+}
+
+#login_form {
+  margin-top: 50px;
+  width:400px;
+  background-color: #b7e6fc;
+  font-size:20px;
+  padding: 10px;
+  border:1px solid #047CD2;
+
+
+}
+
+#slideshow{
+  margin-left:500px;
+  margin-top: -300px;  
+}
+
+#slideshow img {
+  border-radius:5px;
+  border-color:#0C48E1; 
+}
+
+#login_form, .auth {
+  margin-left: 10px;
+}
+ 
+h2{
+  text-align: center;
+  margin-right: 40px;
+  
+}
+
+.auth{
+display: block;
+
+}
+
+.inputs{
+  margin-left: 35px;
+  padding:10px;
+
+}
+
+#video_java{
+	margin-left:50px;
+}
+
+#username, #password {
+  height: 24px;
+  width: 250px;
+  font-size:20px; 
+  
+}
+
+#wrapper{
+  width: 1200px;
+  margin:0 auto;
+  background-color:white; 
+  padding: 10px;
+  border-radius: 5px;
+  height:100%;
+}
+
+.search{
+  margin-left: 500px;
+  margin-top: -50px;
+
+}
+
+#searchbox{
+  height: 25px;
+  width: 280px;
+  margin-top: -1px;
+}
+
+#search_label {
+ 
+  background-color: #050001;
+  padding: 5px;
+  height: 25px;
+  width: 250px;
+  color:white;
+  border: 1px solid white;
+}
+
+#submit_login{
+  font-size:20px;
+  background-color:#0C48E1;
+  border:1;  
+  padding: 10px;
+  margin-top: 10px;
+  width: 120px;
+  font-weight: bold;
+  color:white;
+}
+#register_link {
+  text-decoration: none;
+  background-color:#FC2B43;
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 120px;
+  font-weight: bold;
+  padding: 10px;
+  color:white;
+  font-size:20px;
+  border:1;
+}
+
+#video_plat{
+  padding: 10px;
+  margin: 0 auto;
+  clear:both;
+}
+
+#web_sites{
+	
+}
+
+#video_plat h2 {
+  margin-top:50px;
+  color:black;
+  border-radius: 5px;
+  background-color:#D9DCFA;
+  text-align: left;
+  font-style: italic;
+  font-family:cursive;
+}
+
+#sign_up_link{
+  color:#0AFB02;
+
+}
+
+a{
+	text-decoration:none;
+}
+
+footer{
+  margin-top:10px;
+padding:10px;
+background: #0C48E1;
+width: 1200px;
+margin: 0 auto;
+}
+
+footer ul{
+  margin:0 auto;
+  margin-left: 350px;
+  list-style:white; 
+  background-color:#0C48E1;
+  display: inline-block;
+  
+}
+
+footer ul li {
+  padding: 10px;
+}
+
+
+footer ul li a {
+  color: white;
+  font-size: 22px;
+  font-family: Arial white;
+  font-style:cursive;
+  text-decoration: none;
+}
+
+footer ul li a:hover{
+  font-size: 22px;
+  border-radius:5px;
+  background-color:#0ABBDA;
+  padding:1px;
+  font-family: Arial white bold;
+}
+
+.social-icon{
+ margin:0 auto;
+}
+
+footer p {
+  color:white;
+  font-size:22px; 
+  margin: 0 auto;
+  padding: 10px;
+}
+
+
+/* Animations  */
+
+@media screen and (min-width: 480px) {
+
+  form {
+    max-width: 480px;
+  }
+
+}
+
+#wrapper #select_m {
+    text-align: center;
+    font-size: 50px;
+}
+
+#buttons {
+    background-color: dimgray;
+    padding: 10px;
+    height: 100px;
+    border-radius: 5px;
+    margin:0 auto;
+
+}
+
+#but_dincho,#but_dani,#but_pepi{
+    font-size: 22px;
+    padding: 10px;
+    border-radius: 5px;
+    border-color: aqua;
+    margin: 0 auto;
+}
+
+#profil_dincho, #profil_dani, #profil_pepi{
+    padding: 10px;
+    margin: 0 auto;
+    font-size: 18px;
+    border:5px solid #3984ff;
+    margin-top: 10px;
+    height:350px;
+    background-color: #ccffcf;
+    display: none;
+   
+}
+
+.bio{
+    float:right;
+    border-radius: 50%;
+}
+
+.bio p {
+    font-family: sans-serif;
+}
+.bio p span{
+    font-family: cursive;
+    color: #ff293a;
+}
+
+#gallery li{
+display: inline-block;
+padding: 10px;
+border-radius: 5px ;
+border: 5px solid rgba(6, 201, 107, 0.85);
+margin-top: 10px;
+
+
+}
+
+.info_course{
+width: 300px;
+margin-left: 278px;
+margin-top: -80px;
+background-color: rgba(201, 197, 178, 0.85);
+position: absolute;
+border-radius: 5px;
+text-align: center;
+font-family: cursive;
+display: none;
+}
+
+.click_info{
+    background-color: rgba(6, 201, 107, 0.85);
+    width: 195px;
+    font-size: 20px;
+    border-radius: 10px;
+    text-decoration: underline;
+    padding: 5px;
+    color:rgba(0, 0, 0, 0.85);
+    text-align: center;
+    margin: 0 auto;
+}
+
+.click_info:hover{
+    background-color: aqua;
+    text-decoration: none;
+
+}
+
+.list_course{
+    color:rgba(19, 24, 201, 0.85);
+    font-size: 18px;
+}
+
+#forum{
+  font-size: 32px;
+  color:black;
+  padding: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
