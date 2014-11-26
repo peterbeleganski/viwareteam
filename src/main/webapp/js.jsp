@@ -21,6 +21,8 @@
 				<li><a href="/Controller?action=home">Начало</a></li>
 				<li><a href="/Controller?action=news">Новини</a></li>
 				<li><a href="/Controller?action=about">За нас</a></li>
+				<li><a href="/Controller?action=main">Курсове</a></li>
+				<li>Здравей,<a href="#"><%=session.getAttribute("email")%></a></li>
 				
 			</ul>
 		</nav>
@@ -46,9 +48,16 @@
 		
 		<input type="hidden" name="action" value="commentjs" />
         <label for="email_name" id="label_email">От:</label>
-        <input type="text" id="email_name" name="email_name" placeholder="(Имейл)"/>
+        <input type="text" id="email_name" name="email_name" placeholder="(Имейл)" readonly value="<%=session.getAttribute("email")%>"/>
         <textarea id="comment" placeholder="Коментар" name="comment" ></textarea><br />
         <input type="submit" value="Изпрати" id="send_comment" />
+		<h2 style="color:red;">
+		<% if(request.getAttribute("mess") == null){%>
+		
+		<%}else{ %>
+		<%=request.getAttribute("mess")%>
+		<%}%>
+		</h2>
         </form>
     </div>
 
@@ -91,9 +100,9 @@
          <a href="https://www.youtube.com/channel/UCChhBPjcpIDgjqFWO2gXO9A/feed"><img src="img/youtube.png" alt="" class="social-icon"></a>
        
         	<ul>
-        		<li><a href="contact.html">Контакти</a></li>
-        		<li><a href="about.html">За нас</a></li>
-        		<li><a href="help.html">Помощ</a></li>
+        		<li><a href="/Controller?action=contact">Контакти</a></li>
+        		<li><a href="/Controller?action=about">За нас</a></li>
+        		
         		<li><a href="/Controller?action=forum">Форум</a></li>
         	</ul>
         <p>&copy; 2014 ViWare.</p>

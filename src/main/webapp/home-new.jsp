@@ -14,11 +14,13 @@
 	
 		<nav id="nav">
 			<ul>
-				<li><a href="/Controller?action=home" class="selected">Начало</a></li>
+				<li><a href="/Controller?action=home" >Начало</a></li>
 				<li><a href="/Controller?action=news">Новини</a></li>
 				<li><a href="/Controller?action=about">За нас</a></li>
-				<li>Здравей,<a href="#"><%="  "+request.getAttribute("email")%></a></li>
+				<li><a href="/Controller?action=main"class="selected">Курсове</a></li>
+				<li>Здравей,<a href="#"><%=session.getAttribute("email")%></a></li>
 			</ul>
+			
 		</nav>
 		<h1><img src="img/ViWare.png" /></h1> 
 </header>
@@ -35,7 +37,7 @@
 
     <li><a href="/Controller?action=course-java">
         <img src="pics/java.png" width="350" height="200"/>
-        <h2>Запиши се</h2>
+        <h2>Гледай Лекция</h2>
     </a>
         <p class="click_info" id="click_java">Информация</p>
 
@@ -50,7 +52,7 @@
 
     <li><a href="/Controller?action=course-html">
         <img src="pics/html-css.jpg" width="350" height="200"/>
-        <h2>Запиши се</h2>
+        <h2>Гледай Лекция</h2>
     </a>
         <p class="click_info" id="click_html">Информация</p>
 
@@ -65,7 +67,7 @@
 
     <li><a href="/Controller?action=course-android">
         <img src="pics/android.jpg" width="350" height="200"/>
-        <h2>Запиши се</h2>
+        <h2>Гледай Лекция</h2>
     </a>
         <p class="click_info" id="click_android">Информация</p>
 
@@ -80,7 +82,7 @@
 
     <li><a href="/Controller?action=course-jquery">
         <img src="pics/jquery.jpg" width="350" height="200"/>
-        <h2>Запиши се</h2>
+        <h2>Гледай Лекция</h2>
     </a>
         <p class="click_info" id="click_jquery">Информация</p>
 
@@ -95,7 +97,7 @@
 
     <li><a href="/Controller?action=course-js">
         <img src="pics/js-picture.png" width="350" height="200"/>
-        <h2>Запиши се</h2>
+        <h2>Гледай Лекция</h2>
     </a>
         <p class="click_info" id="click_javascript">Информация</p>
 
@@ -110,7 +112,7 @@
 
     <li><a href="/Controller?action=course-jsp">
         <img src="pics/servlets.jpg" width="350" height="200"/>
-        <h2>Запиши се</h2>
+        <h2>Гледай Лекция</h2>
     </a>
         <p class="click_info" id="click_servlets">Информация</p>
 
@@ -136,9 +138,9 @@
          <a href="https://www.youtube.com/channel/UCChhBPjcpIDgjqFWO2gXO9A/feed"><img src="img/youtube.png" alt="" class="social-icon"></a>
        
         	<ul>
-        		<li><a href="contact.html">Контакти</a></li>
-        		<li><a href="about.html">За нас</a></li>
-        		<li><a href="help.html">Помощ</a></li>
+        		<li><a href="/Controller?action=contact">Контакти</a></li>
+        		<li><a href="/Controller?action=about">За нас</a></li>
+        		
         		<li><a href="/Controller?action=forum">Форум</a></li>
         	</ul>
         <p>&copy; 2014 ViWare.</p>

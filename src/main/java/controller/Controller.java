@@ -81,62 +81,127 @@ public class Controller extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		PrintWriter out = response.getWriter();
 		HttpSession	session = request.getSession();
-	session.setAttribute("isLogged","false");
 		String action = request.getParameter("action");
-		String email= "";
+		String email = (String) session.getAttribute("email");
+		
 		
 		
 		if(action == null){
 			request.setAttribute("message", "");
 			request.getRequestDispatcher("/login.jsp").forward(request, response);
 	
+		}else if(action.equals("contact")){
+			request.getRequestDispatcher("/contact.jsp").forward(request, response);
+		}else if(action.equals("help")){
+			request.getRequestDispatcher("/help.jsp").forward(request, response);
 		}else if(action.equals("course-jsp")){
-			request.setAttribute("email", "");   
-			request.getRequestDispatcher("/jsp-servlet.jsp").forward(request, response);
+			 if(email!=null){
+			 session.setAttribute("email",email); 
+			 session.setMaxInactiveInterval(3600);
+			 request.setAttribute("message", "Invalid Login");			 
+			 request.getRequestDispatcher("/jsp-servlet.jsp").forward(request, response);
+			}else{
+			request.getRequestDispatcher("/login.jsp").forward(request, response);
+			} 
+			
 			
 		}
 		else if(action.equals("course-java")){
-			request.setAttribute("email", "");   
-			request.getRequestDispatcher("/video-java.jsp").forward(request, response);
+			if(email!=null){
+			 session.setAttribute("email",email); 
+			 session.setMaxInactiveInterval(3600);	
+			 request.setAttribute("message", "Invalid Login");				 
+			 request.getRequestDispatcher("/video-java.jsp").forward(request, response);
+			}else{
+			request.getRequestDispatcher("/login.jsp").forward(request, response);
+			} 
+			
 			
 		}else if(action.equals("course-html")){
+			if(email!=null){
+			 session.setAttribute("email",email); 
+			 session.setMaxInactiveInterval(3600);
+			 request.setAttribute("message", "Invalid Login");			 
+			 request.getRequestDispatcher("/html.jsp").forward(request, response);
+			}else{
+			request.getRequestDispatcher("/login.jsp").forward(request, response);
+			} 
+			  
 			
-			request.setAttribute("email", email);   
-			request.getRequestDispatcher("/html.jsp").forward(request, response);
 			
 		}else if(action.equals("course-android")){
-		
-			request.setAttribute("email", email);   
+			if(email!=null){
+			 session.setAttribute("email",email); 
+			 session.setMaxInactiveInterval(3600);
+			 request.setAttribute("message", "Invalid Login");			 
 			request.getRequestDispatcher("/android.jsp").forward(request, response);
+			}else{
+			request.getRequestDispatcher("/login.jsp").forward(request, response);
+			} 
+			  
+			
 			
 		}else if(action.equals("course-js")){
+			if(email!=null){
+			 session.setAttribute("email",email); 
+			 session.setMaxInactiveInterval(3600);
+			 request.setAttribute("message", "Invalid Login");			 
+			 request.getRequestDispatcher("/js.jsp").forward(request, response);
+			}else{
+			request.getRequestDispatcher("/login.jsp").forward(request, response);
+			} 
+			   
 			
-			request.setAttribute("email", email);   
-			request.getRequestDispatcher("/js.jsp").forward(request, response);
 			
 		}	
 		else if(action.equals("course-jquery")){
 			
-			request.setAttribute("email", email);   
-			request.getRequestDispatcher("/jquery.jsp").forward(request, response);
-			
-			
+			if(email!=null){
+			 session.setAttribute("email",email); 
+			 session.setMaxInactiveInterval(3600);
+			 request.setAttribute("message", "Invalid Login");			 
+			 request.getRequestDispatcher("/jquery.jsp").forward(request, response);
+			}else{
+			request.getRequestDispatcher("/login.jsp").forward(request, response);
+			} 
+	
 		}else if(action.equals("forum")){
 			
-			request.setAttribute("email", email);   
-			request.getRequestDispatcher("/forum.jsp").forward(request, response);
+			 if(email!=null){
+			 session.setAttribute("email",email); 
+			 session.setMaxInactiveInterval(3600);
+			 request.setAttribute("message", "Invalid Login");			 
+			 request.getRequestDispatcher("/forum.jsp").forward(request, response);
+			}else{
+			request.getRequestDispatcher("/login.jsp").forward(request, response);
+			} 
+			
+			
+			
+		}else if(action.equals("main")){
+			
+			if(email!=null){
+			 session.setAttribute("email",email); 
+			 session.setMaxInactiveInterval(3600);
+			 request.setAttribute("message", "Invalid Login");			 
+			request.getRequestDispatcher("/home-new.jsp").forward(request, response);
+			}else{
+			
+			request.getRequestDispatcher("/login.jsp").forward(request, response);
+			}
 			
 			
 		}
 		else if(action.equals("home")){
-			request.setAttribute("email",email);
+			
 			request.setAttribute("message", "");
 			
-			
+			session.setAttribute("email",email); 
 			request.getRequestDispatcher("/login.jsp").forward(request, response);
 			
 			
 		}else if(action.equals("about")){
+			session.setAttribute("email",email); 
 			request.getRequestDispatcher("/about.jsp").forward(request, response);
 		}
 		else if(action.equals("register")){
@@ -146,10 +211,9 @@ public class Controller extends HttpServlet {
 		request.getRequestDispatcher("/login.jsp").forward(request, response);
 		}
 		else if (action.equals("news")){
+			session.setAttribute("email",email); 
 			request.getRequestDispatcher("/news.jsp").forward(request, response);
-		}//else{
-			//doForward(request, response);
-		//}
+		}
 		
 	}
 
@@ -189,8 +253,9 @@ public class Controller extends HttpServlet {
 			
 			try {
 				if(account.login(email, password)){
-					session.setAttribute("isLogged","true");
-					request.setAttribute("email", email);
+					session.setAttribute("loged","true");
+					session.setAttribute("email",email);
+					session.setMaxInactiveInterval(3600);
 					request.getRequestDispatcher("/home-new.jsp").forward(request, response);
 				}else {
 					request.setAttribute("message","email or password not valid !");
@@ -204,6 +269,14 @@ public class Controller extends HttpServlet {
 			request.setCharacterEncoding("UTF-8");
 			String from = request.getParameter("email_name");
 			String comment = request.getParameter("comment");
+			
+			User user = new User(from,comment);
+			if(!user.validate()) {
+					
+					request.setAttribute("mess", user.getMessage());
+					request.getRequestDispatcher("/js.jsp").forward(request, response);
+			}else{
+			
 			Account account = new Account(conn);
 			try {
 				account.commentjs(from, comment);
@@ -211,6 +284,7 @@ public class Controller extends HttpServlet {
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
+			}
 			}
 		}else if(action.equals("commentjsp")){
 			request.setCharacterEncoding("UTF-8");
@@ -325,8 +399,10 @@ public class Controller extends HttpServlet {
 						}
 						else {
 							account.create(email, password);
-							session.setAttribute("isLogged", "true");
-							request.setAttribute("email", request.getParameter("email"));
+							
+							session.setAttribute("loged","true");
+							session.setAttribute("email",email);
+							session.setMaxInactiveInterval(3600);
 							request.getRequestDispatcher("/home-new.jsp").forward(request, response);
 						}
 					} catch (SQLException e) {

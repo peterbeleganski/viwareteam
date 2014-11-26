@@ -75,9 +75,9 @@
          <a href="https://www.youtube.com/channel/UCChhBPjcpIDgjqFWO2gXO9A/feed"><img src="img/youtube.png" alt="" class="social-icon"></a>
        
         	<ul>
-        		<li><a href="contact.html">Контакти</a></li>
-        		<li><a href="about.html">За нас</a></li>
-        		<li><a href="help.html">Помощ</a></li>
+        		<li><a href="/Controller?action=contact">Контакти</a></li>
+        		<li><a href="/Controller?action=about">За нас</a></li>
+        		
         		<li><a href="/Controller?action=forum">Форум</a></li>
         	</ul>
         <p>&copy; 2014 ViWare.</p>
